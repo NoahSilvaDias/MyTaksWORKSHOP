@@ -9,8 +9,22 @@
     --shape: #FFFFFF;
 }
 
+body{
+    background-color: var(--shape);
+    font: 16px "Poppins";
+}
+
+button {
+    cursor: pointer;
+}
+
 .header{
     background-color: var(--shape);
+}
+
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
 .header header{
@@ -24,4 +38,48 @@
 
 .header header img {
     max-width: 80px;
+}
+
+section.criaTask{
+    background-color: var(--blue);
+    border-radius: 1rem;
+    margin-top: -5rem;
+    padding: 5rem 4rem;
+}
+
+section.criaTask header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+section.criaTask h1{
+    color: var(--background);
+    font-size: 2.25rem;
+}
+
+section.criaTask .input-group{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+section.criaTask .input-group input {
+    background-color: var(--shape);
+    color: var(--text-body);
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+    padding-right: 100px;
+}
+section.criaTask .input-group button{
+    color: var(--shape);
+    background-color: var(--green);
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.25rem;
 }

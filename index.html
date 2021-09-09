@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fábrica</title>
     <link rel="stylesheet" href="./StylesIndex.css">
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -13,5 +16,27 @@
             <img src="./LOGO-ROXA-LETREIRO.png" alt="Logo Roxa">
         </header>
     </div>
+    <div class="container">
+        <section class="criaTask">
+            <header>
+                <h1>Minhas Tasks</h1>
+                <div class="input-group">
+                    <input type="text" placeholder="Adicionar uma nova Task" id="novaTask">
+                    <button onclick=getValue()>
+                        Enviar
+                    </button>
+                </div>
+            </header>
+            <div class="seeTasksDiv">
+                
+            </div>
+        </section>
+    </div>
 </body>
+<script>
+    const seeTasksDiv = document.querySelector('.seeTasksDiv')
+
+    const seeTask = document.createElement('h1')
+    seeTasksDiv.appendChild(seeTask)
+</script>
 </html>
