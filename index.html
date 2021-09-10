@@ -22,7 +22,7 @@
                 <h1>Minhas Tasks</h1>
                 <div class="input-group">
                     <input type="text" placeholder="Adicionar uma nova Task" id="novaTask">
-                    <button onclick=getValue()>
+                    <button onclick=postTask()>
                         Enviar
                     </button>
                 </div>
@@ -34,9 +34,66 @@
     </div>
 </body>
 <script>
-    const seeTasksDiv = document.querySelector('.seeTasksDiv')
 
-    const seeTask = document.createElement('h1')
-    seeTasksDiv.appendChild(seeTask)
+const seeTasksDiv = document.querySelector('.seeTasksDiv')
+
+const seeTasksUl = document.createElement('ul')
+seeTasksDiv.appendChild(seeTasksUl)
+
+function getTasks() {
+    fetch('https://mytod0list-api.herokuapp.com/src/controllers/list-tasks.php')
+        .then(response => response.json())
+        .then(data => {
+            for(i=0;i<data.tasks.length; i++) {
+                const nameTask = data.tasks[i].name
+
+                const seeTasksLi = document.createElement('li')
+                seeTasksLi.innerText = nameTask
+                seeTasksUl.appendChild(seeTasksLi)
+        }
+    })
+}
+getTasks()
+
+function clearTasks() {
+    seeTasksUl.innerHTML = ''
+}
+
+function atualizarTask() {
+    clearTasks()
+    getTasks()
+}
+
+function postTask() {
+    let nameInput = document.querySelector('#novaTask').value
+
+    const body = new FormData()
+    body.append("name",nameInput)
+
+    fetch('https://mytod0list-api.herokuapp.com/src/controllers/add-task.php', { method: 'POST', body })
+        .then(response => response.json())
+        .then(data => {
+            atualizarTask()
+        
+        })
+}
+
+    //const seeTasksDiv = document.querySelector('.seeTasksDiv')
+    //<!-- . pour les class et # pour les id -->
+
+    //const seeTasksUl = document.createElement('ul')
+    //seeTasksDiv.appendChild(seeTasksUl)
+
+    //const seeTasksLi = document.createElement('li')
+    //seeTasksUl.appendChild(seeTasksLi)
+    //seeTasksLi.innerText = 'Minha Primeira Task'
+
+
+    // function getValueInput() { <!-- Demander si getValueInput c'est seulement pour les input-->
+    //    let input = document.querySelector('#novaTask')
+    //    console.log(input)
+    //}
+    //getValueInput()
+
 </script>
 </html>

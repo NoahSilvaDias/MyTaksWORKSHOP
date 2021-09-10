@@ -14,7 +14,7 @@ body{
     font: 16px "Poppins";
 }
 
-button {
+button{
     cursor: pointer;
 }
 
@@ -36,7 +36,7 @@ button {
     justify-content: center;
 }
 
-.header header img {
+.header header img{
     max-width: 80px;
 }
 
@@ -64,7 +64,7 @@ section.criaTask .input-group{
     gap: 0.25rem;
 }
 
-section.criaTask .input-group input {
+section.criaTask .input-group input{
     background-color: var(--shape);
     color: var(--text-body);
     font-family: "Poppins";
