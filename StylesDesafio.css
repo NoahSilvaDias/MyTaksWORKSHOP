@@ -1,0 +1,102 @@
+body {
+    background-color: silver;
+    font: 20px "Poppins";
+}
+
+button {
+    cursor: pointer;
+}
+
+.header header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem 1rem 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header header img {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: -10rem;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+
+section.bomdia {
+    background-color: #ef5411;
+    border-radius: 1.5rem;
+    padding: 5rem;
+    margin-top: -12.5rem;
+}
+
+section.bomdia header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.bomdia h1 {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+section.bomdia .input-group{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.bomdia .input-group input {
+    background-color: white;
+    color: black;
+    font-family: "Poppins";
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 2rem;
+    padding-right: 4.75rem;
+    display: flex;
+    flex-direction: row;
+}
+
+section.bomdia .input-group #ENVIAR {
+    background-color:white;
+    color:black;
+    font-family: "Poppins";
+    font-weight: 800;
+    margin-right: 0.3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+section.bomdia .input-group #Refresh {
+    background-color:white;
+    color:black;
+    font-family: "Poppins";
+    font-weight: 800;
+    margin-right: -3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.userList {
+    color: white;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    margin-left: -1rem;
+}
