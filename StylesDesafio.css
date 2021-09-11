@@ -95,8 +95,10 @@ section.bomdia .input-group #Refresh {
 }
 
 .userList {
+    max-width: 1120px;
     color: white;
     margin: 0 auto;
     font-size: 1.3rem;
     margin-left: -1rem;
+
 }
